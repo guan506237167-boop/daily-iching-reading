@@ -1,4 +1,4 @@
-﻿# I Ching Reading Guide
+# I Ching Reading Guide
 
 An I Ching guide with a coin-style reading tool, hexagram lookup, beginner articles, and clear disclaimers for modern readers.
 
@@ -38,4 +38,3 @@ Key sections:
 - https://www.dailyichingreading.com/guide/coin-casting-kit-concept-buying-guide/
 - https://www.dailyichingreading.com/guide/hexagram-study-cards-buying-guide/
 - https://www.dailyichingreading.com/guide/i-ching-faq-guide/
-
