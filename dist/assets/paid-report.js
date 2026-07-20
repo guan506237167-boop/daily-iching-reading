@@ -42,6 +42,20 @@
     return input;
   }
 
+  function paidEventParams(card) {
+    return {
+      site: card.getAttribute("data-paid-site") || "",
+      product: card.getAttribute("data-paid-product") || "full-report",
+      provider: card.getAttribute("data-paid-provider") || "paypal",
+      page_path: window.location.pathname
+    };
+  }
+
+  function trackPaidEvent(name, card, extra = {}) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", name, { ...paidEventParams(card), ...extra });
+  }
+
   function setStatus(card, message, isError) {
     const status = card.querySelector("[data-paid-status]");
     if (!status) return;
@@ -67,6 +81,7 @@
       button.disabled = true;
       button.textContent = "Creating checkout...";
     }
+    trackPaidEvent("checkout_create_attempt", card);
     setStatus(card, "Connecting to secure checkout...", false);
     try {
       const response = await fetch(card.getAttribute("data-paid-endpoint") || checkoutUrl, {
@@ -82,12 +97,14 @@
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(data.error || "checkout_failed");
+      trackPaidEvent("checkout_create_success", card);
       window.location.href = data.checkoutUrl || data.approvalUrl;
     } catch (error) {
       if (button) {
         button.disabled = false;
         button.textContent = oldText;
       }
+      trackPaidEvent("checkout_create_error", card, { error_message: error.message });
       setStatus(card, `Checkout failed: ${error.message}`, true);
     }
   }
@@ -96,7 +113,10 @@
     const button = event.target.closest("[data-paid-checkout]");
     if (!button) return;
     const card = button.closest("[data-paid-report]");
-    if (card) startCheckout(card);
+    if (card) {
+      trackPaidEvent("paid_cta_click", card);
+      startCheckout(card);
+    }
   });
 
   document.addEventListener("submit", (event) => {
@@ -104,7 +124,10 @@
     if (!form) return;
     event.preventDefault();
     const card = form.closest("[data-paid-report]");
-    if (card) startCheckout(card);
+    if (card) {
+      trackPaidEvent("paid_cta_click", card);
+      startCheckout(card);
+    }
   });
 })();
 
