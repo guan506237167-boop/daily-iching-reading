@@ -29,6 +29,16 @@ function castIChing(event){
   const relatingLines = lines.map(line=>line===6?7:line===9?8:line);
   const relatingIndex = relatingLines.reduce((sum,line,i)=>sum + ((line===7||line===9)?1:0) * (2**i),0) % 64;
   const focus = changed.length ? `Changing lines: ${changed.join(', ')}.` : 'No changing line in this starter reading.';
-  root.querySelector('#result').innerHTML = `<h3>${hexagrams[primaryIndex]}</h3><p><strong>Question:</strong> ${question}</p><p><strong>${focus}</strong> Relating pattern: ${hexagrams[relatingIndex]}.</p><p><strong>Line pattern:</strong> ${lines.map((line,i)=>`line ${i+1}: ${lineText[line]}`).join('; ')}.</p><p>Use this as a structured cultural prompt. It is not professional, medical, legal, or financial advice.</p>`;
+  const result = root.querySelector('#result');
+  if (!result) return;
+  const linePattern = lines.map((line,i)=>`line ${i+1}: ${lineText[line]}`).join('; ');
+  result.dataset.question = question;
+  result.dataset.primaryHexagram = hexagrams[primaryIndex];
+  result.dataset.changingLines = changed.length ? changed.join(', ') : 'none';
+  result.dataset.relatingHexagram = hexagrams[relatingIndex];
+  result.dataset.linePattern = linePattern;
+  result.dataset.readingReady = 'true';
+  result.innerHTML = `<h3>${hexagrams[primaryIndex]}</h3><p><strong>Question:</strong> ${question}</p><p><strong>${focus}</strong> Relating pattern: ${hexagrams[relatingIndex]}.</p><p><strong>Line pattern:</strong> ${linePattern}.</p><p>Use this as a structured cultural prompt. It is not professional, medical, legal, or financial advice.</p>`;
 }
 document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-cast]'); if(b)b.addEventListener('click',castIChing);});
+

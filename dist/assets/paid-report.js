@@ -11,6 +11,21 @@
     }
   }
 
+  function collectIChingInput(card, root, input) {
+    if (card.getAttribute("data-paid-site") !== "iching") return input;
+    const castButton = root.querySelector("[data-cast]");
+    const result = root.querySelector("#result");
+    if (castButton && result && result.dataset.readingReady !== "true") castButton.click();
+    const updatedResult = root.querySelector("#result");
+    if (!updatedResult) return input;
+    input.primaryHexagram = updatedResult.dataset.primaryHexagram || "";
+    input.changingLines = updatedResult.dataset.changingLines || "";
+    input.relatingHexagram = updatedResult.dataset.relatingHexagram || "";
+    input.linePattern = updatedResult.dataset.linePattern || "";
+    input.toolResult = updatedResult.textContent.replace(/\s+/g, " ").trim().slice(0, 1200);
+    return input;
+  }
+
   function collectInput(card) {
     const root = card.closest(".container") || document;
     const input = {};
@@ -19,6 +34,7 @@
       const field = root.querySelector(selector);
       input[key] = field ? String(field.value || field.textContent || "").trim() : "";
     });
+    collectIChingInput(card, root, input);
     if (!input.source) input.source = card.getAttribute("data-paid-site") || "";
     if (!input.question) {
       input.question = input.symbol || input.setting || input.birth || input.name || input.source || "Paid report request";
@@ -91,3 +107,4 @@
     if (card) startCheckout(card);
   });
 })();
+
