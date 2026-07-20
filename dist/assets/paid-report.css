@@ -1,7 +1,21 @@
-.paid-report-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:22px;align-items:center;margin-top:22px;padding:24px;border:1px solid rgba(177,133,69,.32);border-radius:12px;background:rgba(255,253,247,.9);box-shadow:0 16px 38px rgba(36,28,18,.08)}
-.paid-report-label{display:inline-flex;width:max-content;max-width:100%;margin-bottom:10px;padding:5px 10px;border-radius:999px;background:rgba(177,133,69,.13);color:#7d4f1f;font-size:12px;font-weight:560;letter-spacing:.06em;text-transform:uppercase}
-.paid-report-card h2{margin:0 0 8px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(21px,1.8vw,28px);font-weight:560;line-height:1.25;color:var(--deep,#26362f)}
-.paid-report-card p{margin:0;color:var(--muted,#665c50);line-height:1.62}
-.paid-report-form{display:grid;gap:10px;min-width:0}.paid-report-form label{display:grid;gap:7px;color:#3c352e;font-size:13px;font-weight:520}.paid-report-form input{height:44px;width:100%;min-width:0;border:1px solid rgba(177,133,69,.38);border-radius:8px;background:#fff;padding:0 12px;font:inherit;color:#2f2923}.paid-report-form input[aria-invalid="true"]{border-color:#b3343a;box-shadow:0 0 0 3px rgba(179,52,58,.11)}
-.paid-report-button{min-height:44px;border:0;border-radius:8px;background:#7d2a1d;color:#fff;font:inherit;font-size:14px;font-weight:560;cursor:pointer}.paid-report-button:hover{background:#5b1d15}.paid-report-button:disabled{cursor:wait;opacity:.72}.paid-report-status{min-height:20px;font-size:13px;color:var(--muted,#665c50)}.paid-report-status.is-error{color:#a22b31}
-@media(max-width:820px){.paid-report-card{grid-template-columns:1fr;padding:20px}.paid-report-button{width:100%}}
+.paid-report-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.82fr);gap:24px;align-items:stretch;margin-top:26px;padding:0;border:1px solid rgba(202,156,82,.34);border-radius:12px;background:#fffdf7;box-shadow:0 22px 54px rgba(47,31,18,.12);overflow:hidden}
+.paid-report-copy{position:relative;padding:26px 28px;background:linear-gradient(180deg,#fffaf0,#f4e4c8)}
+.paid-report-copy::after{content:"";position:absolute;right:-54px;bottom:-70px;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,rgba(125,42,29,.10),rgba(202,156,82,.05) 54%,transparent 70%);pointer-events:none}
+.paid-report-label{display:inline-flex;width:max-content;max-width:100%;margin-bottom:12px;padding:5px 11px;border-radius:999px;background:rgba(125,42,29,.10);color:#7d2a1d;font-size:12px;font-weight:620;letter-spacing:.06em;text-transform:uppercase}
+.paid-report-card h2{position:relative;margin:0 0 10px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(22px,1.9vw,30px);font-weight:620;line-height:1.24;color:#241810}
+.paid-report-card p{position:relative;margin:0;color:#665747;line-height:1.65}
+.paid-report-freebar{position:relative;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:18px;padding:13px 14px;border:1px solid rgba(125,42,29,.13);border-radius:10px;background:rgba(255,253,247,.78)}
+.paid-report-freebar strong{color:#241810;font-size:13px;font-weight:620}
+.paid-report-freebar span{display:inline-flex;align-items:center;gap:6px;color:#5d5145;font-size:13px}
+.paid-report-freebar span::before{content:"";width:6px;height:6px;border-radius:50%;background:#c89a45}
+.paid-report-benefits{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:18px 0 0;padding:0;list-style:none}
+.paid-report-benefits li{position:relative;padding-left:22px;color:#3d352e;font-size:14px;line-height:1.45}
+.paid-report-benefits li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:6px;border-left:2px solid #1f8f54;border-bottom:2px solid #1f8f54;transform:rotate(-45deg)}
+.paid-report-form{display:grid;align-content:start;gap:12px;min-width:0;padding:26px 28px;background:#fff}
+.paid-report-price{display:grid;gap:3px;justify-items:center;padding:18px 16px 16px;border:1px solid rgba(202,156,82,.32);border-radius:10px;background:linear-gradient(180deg,#fffaf0,#fff)}
+.paid-report-price span{color:#7d2a1d;font-size:13px;font-weight:620;text-transform:uppercase;letter-spacing:.05em}
+.paid-report-price strong{color:#d06f00;font-size:42px;line-height:1;font-weight:720}
+.paid-report-price small{color:#6a5c4d;font-size:13px}
+.paid-report-form label{display:grid;gap:7px;color:#3c352e;font-size:13px;font-weight:560}.paid-report-form input{height:45px;width:100%;min-width:0;border:1px solid rgba(177,133,69,.38);border-radius:8px;background:#fff;padding:0 12px;font:inherit;color:#2f2923}.paid-report-form input[aria-invalid="true"]{border-color:#b3343a;box-shadow:0 0 0 3px rgba(179,52,58,.11)}
+.paid-report-button{min-height:48px;border:0;border-radius:8px;background:linear-gradient(135deg,#d08a16,#f0b06d);color:#fff;font:inherit;font-size:15px;font-weight:620;cursor:pointer;box-shadow:0 14px 28px rgba(208,111,0,.18)}.paid-report-button:hover{background:linear-gradient(135deg,#b96300,#e79b56)}.paid-report-button:disabled{cursor:wait;opacity:.72}.paid-report-status{min-height:20px;padding:10px 12px;border:1px solid rgba(202,156,82,.28);border-radius:8px;background:#fffaf0;font-size:13px;color:#6a5c4d;line-height:1.45}.paid-report-status.is-error{color:#a22b31;border-color:rgba(162,43,49,.28);background:#fff5f5}
+@media(max-width:820px){.paid-report-card{grid-template-columns:1fr}.paid-report-copy,.paid-report-form{padding:22px}.paid-report-benefits{grid-template-columns:1fr}.paid-report-button{width:100%}}
