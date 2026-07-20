@@ -368,3 +368,11 @@ body{font-size:16px;color:#28241f;-webkit-font-smoothing:antialiased;text-render
 body:not(.iching-home) .article{border-radius:8px}.article-layout{grid-template-columns:minmax(0,860px) 280px;justify-content:center}.sidebar .card{border-radius:8px}.hex-table th,.hex-table td{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important}
 @media(max-width:920px){.nav{gap:12px}.links{gap:12px}.links a{font-size:14px}.article-layout{grid-template-columns:1fr}.brand{white-space:normal}.nav{align-items:flex-start}}
 @media(max-width:540px){.nav{padding:12px 16px}.links{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 12px}.links a{font-size:13.5px}.footer-inner{display:grid}}
+.faq-index-page~.section{padding-top:42px!important;padding-bottom:42px!important}
+.faq-index-page~.section>.container.article{max-width:1040px!important;grid-template-columns:minmax(0,640px) 300px!important;gap:12px 44px!important;padding:38px 44px!important;align-items:start}
+.faq-index-page~.section>.container.article>.eyebrow{grid-column:1/-1!important;margin-bottom:8px}
+.faq-index-page~.section>.container.article>h2{grid-column:1!important;margin:4px 0 16px!important;max-width:640px;font-size:clamp(25px,2.1vw,32px)!important;line-height:1.22}
+.faq-index-page~.section>.container.article>p{grid-column:1!important;max-width:640px;margin-bottom:16px;line-height:1.72}
+.faq-index-page~.section>.container.article>.faq-note-box{grid-column:2!important;grid-row:2 / span 4!important;align-self:start;margin-top:0;padding:20px 22px;min-width:0}
+.faq-index-page~.section>.container.article>.faq-note-box a{width:auto;line-height:1.45}
+@media(max-width:920px){.faq-index-page~.section>.container.article{grid-template-columns:1fr!important;padding:30px 28px!important}.faq-index-page~.section>.container.article>.faq-note-box{grid-column:1!important;grid-row:auto!important}}
