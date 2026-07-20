@@ -280,3 +280,17 @@ body:not(.iching-home) .hex-table td{font-size:15px;line-height:1.62}
 .visual-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:4px}
 .visual-steps em{display:block;padding:9px 10px;border:1px solid rgba(173,123,66,.22);border-radius:7px;background:rgba(255,255,255,.68);color:#4d4339;font-style:normal;font-size:13px;line-height:1.35;text-align:center}
 @media(max-width:720px){.article-visual-break{grid-template-columns:1fr;padding:16px}.visual-steps{grid-template-columns:1fr}.article-visual-break img{max-height:240px}}
+
+
+/* I Ching tool result contrast fix v1 */
+body:not(.iching-home) .result.iching-tool-ready,
+body:not(.iching-home) .hero-tool-result.iching-result{color:#fff7e8!important}
+body:not(.iching-home) .result.iching-tool-ready h3,
+body:not(.iching-home) .hero-tool-result.iching-result h3{color:#fff7e8!important;text-shadow:0 2px 12px rgba(0,0,0,.35);border-bottom-color:rgba(255,247,232,.24)}
+body:not(.iching-home) .result.iching-tool-ready p,
+body:not(.iching-home) .result.iching-tool-ready li,
+body:not(.iching-home) .hero-tool-result.iching-result p{color:rgba(255,247,232,.9)!important}
+body:not(.iching-home) .result.iching-tool-ready strong,
+body:not(.iching-home) .hero-tool-result.iching-result strong{color:#f0c979!important}
+body:not(.iching-home) .result.iching-tool-ready::before,
+body:not(.iching-home) .hero-tool-result.iching-result::before{background:rgba(255,247,232,.14);color:#f0c979!important;border:1px solid rgba(240,201,121,.22)}
