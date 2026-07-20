@@ -294,3 +294,15 @@ body:not(.iching-home) .result.iching-tool-ready strong,
 body:not(.iching-home) .hero-tool-result.iching-result strong{color:#f0c979!important}
 body:not(.iching-home) .result.iching-tool-ready::before,
 body:not(.iching-home) .hero-tool-result.iching-result::before{background:rgba(255,247,232,.14);color:#f0c979!important;border:1px solid rgba(240,201,121,.22)}
+
+
+/* I Ching lightweight page visuals v1 */
+.page-visual-note{display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;align-items:center;margin:24px 0 28px;padding:18px;border:1px solid rgba(173,123,66,.22);border-radius:8px;background:linear-gradient(135deg,#fffaf0,#f1e3ce);box-shadow:0 12px 28px rgba(35,29,21,.06)}
+.page-visual-note img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px;border:1px solid rgba(173,123,66,.18);background:#efe4d1}
+.page-visual-note figcaption{display:grid;gap:8px;margin:0}
+.page-visual-note strong{font-size:18px;font-weight:540;line-height:1.35;color:#173128}
+.page-visual-note span{font-size:15px;line-height:1.66;color:#5d544b}
+.page-visual-note.compact{grid-template-columns:120px minmax(0,1fr);padding:14px;margin:20px 0 24px}
+.page-visual-note.compact strong{font-size:16px}
+.page-visual-note.compact span{font-size:14px}
+@media(max-width:680px){.page-visual-note,.page-visual-note.compact{grid-template-columns:1fr}.page-visual-note img{max-height:220px}}
