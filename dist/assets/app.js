@@ -38,7 +38,7 @@ function castIChing(event){
   result.dataset.relatingHexagram = hexagrams[relatingIndex];
   result.dataset.linePattern = linePattern;
   result.dataset.readingReady = 'true';
-  result.innerHTML = `<h3>${hexagrams[primaryIndex]}</h3><p><strong>Question:</strong> ${question}</p><p><strong>${focus}</strong> Relating pattern: ${hexagrams[relatingIndex]}.</p><p><strong>Line pattern:</strong> ${linePattern}.</p><p>Use this as a structured cultural reflection note. It is not professional, medical, legal, or financial advice.</p>`;
+  result.innerHTML = `<h3>${hexagrams[primaryIndex]}</h3><p><strong>Question:</strong> ${question}</p><p><strong>${focus}</strong> Relating pattern: ${hexagrams[relatingIndex]}.</p><p><strong>Line pattern:</strong> ${linePattern}.</p><p>Treat this reading as a reflection note, not as professional, medical, legal, or financial advice.</p>`;
 }
 document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-cast]'); if(b)b.addEventListener('click',castIChing);});
 
