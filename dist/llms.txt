@@ -12,6 +12,7 @@ Key sections:
 - https://www.dailyichingreading.com/contact/
 - https://www.dailyichingreading.com/privacy/
 - https://www.dailyichingreading.com/terms/
+- https://www.dailyichingreading.com/disclaimer/
 - https://www.dailyichingreading.com/categories/hexagrams/
 - https://www.dailyichingreading.com/categories/casting/
 - https://www.dailyichingreading.com/categories/interpretation/
