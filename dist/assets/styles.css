@@ -1040,3 +1040,69 @@ body.love-page .love-link-stack {
 body.love-page .love-link-stack a {
   padding: 17px 18px;
 }
+
+/* Article visual and text block polish, 2026-07-21. */
+body:not(.iching-home) .article > p:not(.lead):not(.muted),
+body:not(.iching-home) .faq-detail-article > section > p,
+body:not(.iching-home) .resource-main > section > p {
+  padding: 15px 17px;
+  border: 1px solid rgba(173, 123, 66, 0.14);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.84), rgba(246, 234, 215, 0.66));
+}
+
+body:not(.iching-home) .article > p + p:not(.lead):not(.muted),
+body:not(.iching-home) .faq-detail-article > section > p + p,
+body:not(.iching-home) .resource-main > section > p + p {
+  margin-top: 12px;
+}
+
+body:not(.iching-home) .article h2 {
+  padding-top: 8px;
+  border-top: 1px solid rgba(173, 123, 66, 0.22);
+}
+
+body:not(.iching-home) .article-visual-break,
+body:not(.iching-home) .page-visual-note,
+body:not(.iching-home) .article-directory,
+body:not(.iching-home) .guide-topic-grid section,
+body:not(.iching-home) .faq-note-box,
+body:not(.iching-home) .resource-card {
+  background: linear-gradient(135deg, #fffaf0, #f2e4cf);
+  border-color: rgba(173, 123, 66, 0.24);
+  box-shadow: 0 16px 34px rgba(35, 29, 21, 0.07);
+}
+
+body:not(.iching-home) .article-visual-break img[src$=".svg"],
+body:not(.iching-home) .page-visual-note img[src$=".svg"],
+body:not(.iching-home) .faq-detail-page .page-visual-note.compact img[src$=".svg"],
+body:not(.iching-home) .card img[src$=".svg"],
+body:not(.iching-home) .iching-card img[src$=".svg"],
+body:not(.iching-home) .article-cover[src$=".svg"],
+body:not(.iching-home) .banner-img[src$=".svg"] {
+  object-fit: contain !important;
+  padding: 18px;
+  background: linear-gradient(135deg, #fffaf0, #eadcc6);
+}
+
+body:not(.iching-home) .sidebar .card:first-child p a {
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #fffaf0, #f2e4cf);
+}
+
+@media (max-width: 540px) {
+  body:not(.iching-home) .article > p:not(.lead):not(.muted),
+  body:not(.iching-home) .faq-detail-article > section > p,
+  body:not(.iching-home) .resource-main > section > p {
+    padding: 13px 14px;
+  }
+
+  body:not(.iching-home) .article-visual-break img[src$=".svg"],
+  body:not(.iching-home) .page-visual-note img[src$=".svg"],
+  body:not(.iching-home) .card img[src$=".svg"],
+  body:not(.iching-home) .iching-card img[src$=".svg"],
+  body:not(.iching-home) .article-cover[src$=".svg"],
+  body:not(.iching-home) .banner-img[src$=".svg"] {
+    padding: 12px;
+  }
+}
