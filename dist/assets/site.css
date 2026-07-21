@@ -718,3 +718,25 @@ body.tools-page .tool-next-steps-20260721 .card .btn.secondary:focus-visible {
   outline: 3px solid rgba(173, 123, 66, 0.34);
   outline-offset: 3px;
 }
+
+/* Report mini preview bottom alignment, 2026-07-21. */
+body.tools-page .report-mini-preview {
+  align-items: end;
+}
+
+body.tools-page .report-mini-preview .report-mini-meta {
+  align-self: end;
+}
+
+body.tools-page .report-mini-preview .report-mini-list,
+body.tools-page .report-mini-preview .report-mini-meta {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  body.tools-page .report-mini-preview,
+  body.tools-page .report-mini-preview .report-mini-meta {
+    align-items: stretch;
+    align-self: stretch;
+  }
+}
