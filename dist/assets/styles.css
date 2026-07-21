@@ -1303,3 +1303,12 @@ body.reports-page .report-duo-visual span {
     grid-template-columns: 1fr;
   }
 }
+
+/* Reports paired card visual alignment, 2026-07-21. */
+@media (min-width: 901px) {
+  body.reports-page .reports-duo-card h2 {
+    min-height: 2.62em;
+    display: flex;
+    align-items: flex-start;
+  }
+}
