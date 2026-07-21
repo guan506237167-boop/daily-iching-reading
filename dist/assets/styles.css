@@ -546,3 +546,46 @@ body.iching-page .container > h2:first-child {
     font-size: 82px;
   }
 }
+
+
+/* Tools page horizontal guidance cards, 2026-07-21. */
+body.tools-page .tool-guidance-pair-section {
+  padding-top: 34px !important;
+  padding-bottom: 34px !important;
+}
+
+body.tools-page .tool-guidance-pair-section + .section {
+  padding-top: 34px !important;
+}
+
+body.tools-page .tool-guidance-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(280px, 0.78fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+body.tools-page .tool-guidance-card {
+  height: 100%;
+  padding: 0;
+}
+
+body.tools-page .tool-guidance-card .card-body {
+  padding: 28px 30px;
+}
+
+body.tools-page .tool-guidance-card h2 {
+  margin-top: 28px;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.18;
+}
+
+body.tools-page .tool-guidance-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  body.tools-page .tool-guidance-pair {
+    grid-template-columns: 1fr;
+  }
+}
