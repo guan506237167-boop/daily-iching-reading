@@ -918,3 +918,28 @@ body.reports-page .report-standard-note {
     font-size: 16px;
   }
 }
+
+/* Reports hero trust CTA spacing, 2026-07-21. */
+body.reports-page .report-trust-20260721 + p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 34px 0 0;
+  padding-top: 4px;
+  clear: both;
+}
+
+body.reports-page .report-trust-20260721 + p .btn {
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  body.reports-page .report-trust-20260721 + p {
+    margin-top: 26px;
+  }
+
+  body.reports-page .report-trust-20260721 + p .btn {
+    width: 100%;
+  }
+}
