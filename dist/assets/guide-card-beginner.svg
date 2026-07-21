@@ -12,8 +12,8 @@
   </g>
   <rect x="150" y="128" width="410" height="520" rx="28" fill="#fffaf0" opacity=".96"/>
   <rect x="640" y="128" width="410" height="520" rx="28" fill="#20352d" opacity=".95"/>
-  <text x="205" y="218" fill="#20352d" font-family="Georgia, serif" font-size="48" font-weight="700">Beginner Guide</text>
-  <text x="694" y="218" fill="#fff8e8" font-family="Georgia, serif" font-size="48" font-weight="700">Reading Order</text>
+  <text x="195" y="218" fill="#20352d" font-family="Georgia, serif" font-size="38" font-weight="700">Beginner Guide</text>
+  <text x="695" y="218" fill="#fff8e8" font-family="Georgia, serif" font-size="38" font-weight="700">Reading Order</text>
   <g font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">
     <circle cx="220" cy="310" r="22" fill="#b98547"/><text x="265" y="320" fill="#20352d">Question</text>
     <circle cx="220" cy="400" r="22" fill="#5d7165"/><text x="265" y="410" fill="#20352d">Hexagram</text>
