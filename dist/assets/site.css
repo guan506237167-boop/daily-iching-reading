@@ -479,3 +479,12 @@ body.tools-page .tool-faq-actions {
     align-items: flex-start;
   }
 }
+
+/* Love page hero CTA note spacing, 2026-07-21. */
+body.love-page .panel .actions + .muted {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(173, 123, 66, 0.22);
+  color: #5f574f;
+}
