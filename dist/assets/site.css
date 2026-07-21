@@ -740,3 +740,42 @@ body.tools-page .report-mini-preview .report-mini-meta {
     align-self: stretch;
   }
 }
+
+/* Reports paired article cards alignment, 2026-07-21. */
+body.reports-page .reports-duo-section {
+  padding-top: 64px;
+}
+
+body.reports-page .reports-duo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  max-width: 1180px;
+}
+
+body.reports-page .reports-duo-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 34px 36px;
+}
+
+body.reports-page .reports-duo-card h2 {
+  font-size: clamp(25px, 2vw, 32px);
+}
+
+body.reports-page .reports-duo-card > p:not(.lead):not(.muted) {
+  width: 100%;
+  max-width: none !important;
+}
+
+@media (max-width: 900px) {
+  body.reports-page .reports-duo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.reports-page .reports-duo-card {
+    padding: 28px 24px;
+  }
+}
