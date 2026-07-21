@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Beginner interpretation visual guide">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7ead3"/>
+      <stop offset="1" stop-color="#d7a75b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#7d2a1d" stroke-width="2">
+    <path d="M0 120 H1200 M0 240 H1200 M0 360 H1200 M0 480 H1200 M0 600 H1200"/>
+    <path d="M120 0 V800 M240 0 V800 M360 0 V800 M480 0 V800 M600 0 V800 M720 0 V800 M840 0 V800 M960 0 V800 M1080 0 V800"/>
+  </g>
+  <rect x="150" y="128" width="410" height="520" rx="28" fill="#fffaf0" opacity=".96"/>
+  <rect x="640" y="128" width="410" height="520" rx="28" fill="#20352d" opacity=".95"/>
+  <text x="205" y="218" fill="#20352d" font-family="Georgia, serif" font-size="48" font-weight="700">Beginner Guide</text>
+  <text x="694" y="218" fill="#fff8e8" font-family="Georgia, serif" font-size="48" font-weight="700">Reading Order</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">
+    <circle cx="220" cy="310" r="22" fill="#b98547"/><text x="265" y="320" fill="#20352d">Question</text>
+    <circle cx="220" cy="400" r="22" fill="#5d7165"/><text x="265" y="410" fill="#20352d">Hexagram</text>
+    <circle cx="220" cy="490" r="22" fill="#a87979"/><text x="265" y="500" fill="#20352d">Action note</text>
+  </g>
+  <g fill="none" stroke="#f1d6a9" stroke-width="24" stroke-linecap="round">
+    <path d="M710 315 H980"/>
+    <path d="M710 405 H850 M910 405 H980"/>
+    <path d="M710 495 H980"/>
+  </g>
+  <text x="694" y="590" fill="#f8e8bf" font-family="Inter, Arial, sans-serif" font-size="24">Reflect before deciding</text>
+</svg>

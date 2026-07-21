@@ -1406,6 +1406,11 @@ body.guide-page .grid .card-body .btn {
 body.guide-page .grid .card img {
   min-height: 238px;
 }
+body.guide-page .grid .card img[src*="guide-card-"] {
+  object-fit: cover !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
 
 @media (max-width: 620px) {
   body.guide-page .grid .card-body .btn {
