@@ -1380,3 +1380,35 @@ body.reports-page .report-trust-20260721 + p .btn {
     width: 100%;
   }
 }
+
+/* Guide card alignment and distinct article-cover treatment, 2026-07-21. */
+body.guide-page .grid .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.guide-page .grid .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+body.guide-page .grid .card-body .muted {
+  margin-bottom: 20px;
+}
+
+body.guide-page .grid .card-body .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+body.guide-page .grid .card img {
+  min-height: 238px;
+}
+
+@media (max-width: 620px) {
+  body.guide-page .grid .card-body .btn {
+    width: 100%;
+  }
+}
