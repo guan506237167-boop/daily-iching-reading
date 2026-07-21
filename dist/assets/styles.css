@@ -1471,3 +1471,37 @@ body.guide-page .guide-standard-section .container.article {
     padding: 15px 16px;
   }
 }
+/* Guide bottom article alignment polish, 2026-07-21. */
+body.guide-page .article-section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body.guide-page .article-section .container.article {
+  width: min(1180px, calc(100vw - 40px));
+  max-width: 1180px !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(30px, 4vw, 48px);
+}
+
+body.guide-page .article-section .container.article h2,
+body.guide-page .article-section .container.article p {
+  max-width: none !important;
+}
+
+body.guide-page .article-section .container.article p:not(.lead):not(.muted) {
+  padding-left: clamp(18px, 2vw, 24px);
+  padding-right: clamp(18px, 2vw, 24px);
+}
+
+body.guide-page .article-section + .article-section {
+  padding-top: 34px;
+}
+
+@media (max-width: 620px) {
+  body.guide-page .article-section .container.article {
+    width: min(100%, calc(100vw - 32px));
+    padding: 24px 18px;
+  }
+}
