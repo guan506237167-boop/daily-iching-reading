@@ -1417,3 +1417,57 @@ body.guide-page .grid .card img[src*="guide-card-"] {
     width: 100%;
   }
 }
+/* Guide learning path layout polish, 2026-07-21. */
+body.guide-page .guide-learning-section .head {
+  display: block;
+  max-width: 980px;
+  margin-bottom: 28px;
+}
+
+body.guide-page .guide-learning-section .head p {
+  max-width: none;
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1px solid rgba(173, 123, 66, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fffaf0, #f2e4cf);
+  color: #3f372f;
+  box-shadow: 0 14px 30px rgba(35, 29, 21, 0.05);
+}
+
+body.guide-page .guide-learning-section .grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+body.guide-page .guide-learning-section .card {
+  min-height: 230px;
+}
+
+body.guide-page .guide-learning-section .card-body {
+  justify-content: flex-start;
+}
+
+body.guide-page .guide-learning-section .card h3 {
+  min-height: 30px;
+}
+
+body.guide-page .guide-standard-section .container.article {
+  max-width: 1180px;
+}
+
+@media (max-width: 1040px) {
+  body.guide-page .guide-learning-section .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  body.guide-page .guide-learning-section .grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.guide-page .guide-learning-section .head p {
+    padding: 15px 16px;
+  }
+}
