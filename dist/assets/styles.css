@@ -1135,3 +1135,23 @@ body:not(.iching-home) .article-section .container.article > p:not(.lead):not(.m
     max-width: 1040px;
   }
 }
+
+/* Tool next-step card button polish, 2026-07-21. */
+body.tools-page .tool-next-steps-20260721 .card .btn.secondary {
+  border-color: rgba(125, 63, 33, 0.58) !important;
+  background: linear-gradient(135deg, #ad7b42, #7d3f21) !important;
+  color: #fffaf0 !important;
+  box-shadow: 0 12px 24px rgba(125, 63, 33, 0.20);
+}
+
+body.tools-page .tool-next-steps-20260721 .card .btn.secondary:hover {
+  border-color: rgba(20, 37, 31, 0.45) !important;
+  background: linear-gradient(135deg, #243a30, #14251f) !important;
+  color: #fff7e8 !important;
+  transform: translateY(-1px);
+}
+
+body.tools-page .tool-next-steps-20260721 .card .btn.secondary:focus-visible {
+  outline: 3px solid rgba(173, 123, 66, 0.34);
+  outline-offset: 3px;
+}
