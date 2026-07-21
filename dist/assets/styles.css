@@ -1106,3 +1106,32 @@ body:not(.iching-home) .sidebar .card:first-child p a {
     padding: 12px;
   }
 }
+
+/* Align article text background blocks, 2026-07-21. */
+body:not(.iching-home) .article > p:not(.lead):not(.muted),
+body:not(.iching-home) .faq-detail-article > section > p,
+body:not(.iching-home) .resource-main > section > p {
+  display: block;
+  width: 100%;
+  max-width: none !important;
+}
+
+body:not(.iching-home) .article > h2,
+body:not(.iching-home) .faq-detail-article > section > h2,
+body:not(.iching-home) .resource-main > section > h2 {
+  width: 100%;
+  max-width: none;
+}
+
+body:not(.iching-home) .section > .container.article > p:not(.lead):not(.muted),
+body:not(.iching-home) .article-section .container.article > p:not(.lead):not(.muted) {
+  width: 100%;
+  max-width: none !important;
+}
+
+@media (min-width: 921px) {
+  body:not(.iching-home) .section > .container.article,
+  body:not(.iching-home) .article-section .container.article {
+    max-width: 1040px;
+  }
+}
